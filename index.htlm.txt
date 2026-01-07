@@ -1,0 +1,50 @@
+# 🌟 MamaLove Kitchen Wears
+
+Welcome to *MamaLove Kitchen Wears* — your trusted source for affordable and high-quality home and kitchen appliances.
+This website showcases our products and allows customers to *pre-order* directly online.
+
+---
+
+## 🏠 Website Overview
+
+Our site includes:
+- 🏡 *Home Page* – Introduction and pre-order highlights
+- 🧑‍🍳 *Products Page* – Display of top-selling appliances like blenders, air fryers, microwaves, and cookers
+- 🛒 *Pre-Order / Checkout Form* – Customers can place orders and pay a deposit (30%–50%)
+- 📞 *Contact Section* – Reach us via phone or email for enquiries or bulk orders
+
+---
+
+## 💻 Technologies Used
+- *HTML5* – Structure and layout
+- *CSS3* – Styling and responsive design
+- *Formspree* – Order form email handling
+- *JavaScript* – Cart management and checkout system
+
+---
+
+## 🛍️ Features
+✅ Modern, responsive design (mobile & desktop friendly)
+✅ Add-to-cart system with live total updates
+✅ Prices and discounts displayed
+✅ Checkout form integrated with Formspree email service
+✅ Thank-you confirmation message after successful order
+
+---
+
+## 📧 Contact Information
+*Business Name:* MamaLove Kitchen Wears
+*Phone:* 0245261862 / 0533477231
+*Email:* macmelodym@gmail.com
+*Location:* Ghana
+
+---
+
+## 🌐 Live Website
+👉 [Visit MamaLove Kitchen Wears Website](https://mamalovekitchenwears.github.io/mamalovekitchenwears/)
+
+---
+
+## 🧾 License
+This project is open for viewing and modification for educational and personal business purposes.
+© 2025 *MamaLove Kitchen Wears* – All Rights Reserved.
