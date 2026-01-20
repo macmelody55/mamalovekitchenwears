@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MamaLove Kitchen Wears</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #002b5c;
+    }
+    header {
+      background: linear-gradient(90deg, #ffcc00, #ffffff, #007bff);
+      padding: 20px;
+      text-align: center;
+      color: #002b5c;
+    }
+    nav {
+      background: #007bff;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #fff, #fffae6);
+    }
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .product button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .product button:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    footer {
+      background: #002b5c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .cart {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .cart h2 {
+      text-align: center;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    .thank-you {
+      display: none;
+      text-align: center;
+      background: #fffae6;
+      padding: 40px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MamaLove Kitchen Wears</h1>
+    <p>Quality Home Appliances – Pre-order and Save!</p>
+  </header>  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section class="hero" id="home">
+    <h1>Pre-order Your Favourite Home Appliances Today!</h1>
+    <p>Pay just 30%–50% upfront and enjoy exclusive discounts.</p>
+  </section>  <section id="products">
+    <h2 style="text-align:center;">Our Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Blender" alt="Blender">
+        <h3>Blender</h3>
+        <p>₵450 <span style="color:red;">(₵400 Pre-order)</span></p>
+        <button onclick="addToCart('Blender', 400)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Air+Fryer" alt="Air Fryer">
+        <h3>Air Fryer</h3>
+        <p>₵850 <span style="color:red;">(₵750 Pre-order)</span></p>
+        <button onclick="addToCart('Air Fryer', 750)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Microwave" alt="Microwave">
+        <h3>Microwave</h3>
+        <p>₵1200 <span style="color:red;">(₵1050 Pre-order)</span></p>
+        <button onclick="addToCart('Microwave', 1050)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Multi+Cooker" alt="Multi Cooker">
+        <h3>Multi-purpose Cooker</h3>
+        <p>₵950 <span style="color:red;">(₵850 Pre-order)</span></p>
+        <button onclick="addToCart('Multi-purpose Cooker', 850)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Hot+Plate" alt="Hot Plate">
+        <h3>Hot Plate</h3>
+        <p>₵400 <span style="color:red;">(₵350 Pre-order)</span></p>
+        <button onclick="addToCart('Hot Plate', 350)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Iron+Kettle" alt="Iron Kettle">
+        <h3>Iron Kettle</h3>
+        <p>₵300 <span style="color:red;">(₵250 Pre-order)</span></p>
+        <button onclick="addToCart('Iron Kettle', 250)">Add to Cart</button>
+      </div>
+    </div>
+  </section>  <section class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: ₵<span id="cart-total">0</span></h3>
+  </section>  <section id="contact">
+    <h2 style="text-align:center;">Checkout / Contact Us</h2>
+    <form id="orderForm" action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="hidden" name="_subject" value="New Pre-Order from MamaLove Website">
+      <input type="hidden" id="orderSummary" name="Order Summary">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required><label for="phone">Phone Number</label>
+  <input type="text" name="phone" id="phone" required>
+
+
+  <label for="address">Delivery Address</label>
+  <textarea name="address" id="address" required></textarea>
+
+
+  <button type="submit">Submit Order</button>
+</form>
+
+
+<div class="thank-you" id="thankYou">🎉 Thank you for your order! We'll contact you soon. 🎉</div>
+
+
+  </section>  <footer>
+    <p>📞 0245261862 / 0533477231 | 🌐 mamalovekitchenwears.com</p>
+    <p>© 2025 MamaLove Kitchen Wears. All rights reserved.</p>
+  </footer>  <script>
+    let cart = [];
+
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      updateCart();
+    }
+
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let total = 0;
+
+
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.textContent = ${item.product} - ₵${item.price};
+        cartItems.appendChild(div);
+        total += item.price;
+      });
+
+
+      cartTotal.textContent = total;
+      document.getElementById('orderSummary').value = JSON.stringify(cart);
+    }
+
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+
+      const form = e.target;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('thankYou').style.display = 'block';
+          form.reset();
+          cart = [];
+          updateCart();
+        } else {
+          alert('There was a problem submitting your order. Please try again.');
+        }
+      });
+    });
+  </script></body>
+</html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MamaLove Kitchen Wears</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #002b5c;
+    }
+    header {
+      background: linear-gradient(90deg, #ffcc00, #ffffff, #007bff);
+      padding: 20px;
+      text-align: center;
+      color: #002b5c;
+    }
+    nav {
+      background: #007bff;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #fff, #fffae6);
+    }
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .product button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .product button:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    footer {
+      background: #002b5c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .cart {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .cart h2 {
+      text-align: center;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #ffcc00;
+      color: #002b5c;
+    }
+    .thank-you {
+      display: none;
+      text-align: center;
+      background: #fffae6;
+      padding: 40px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MamaLove Kitchen Wears</h1>
+    <p>Quality Home Appliances – Pre-order and Save!</p>
+  </header>  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section class="hero" id="home">
+    <h1>Pre-order Your Favourite Home Appliances Today!</h1>
+    <p>Pay just 30%–50% upfront and enjoy exclusive discounts.</p>
+  </section>  <section id="products">
+    <h2 style="text-align:center;">Our Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Blender" alt="Blender">
+        <h3>Blender</h3>
+        <p>₵450 <span style="color:red;">(₵400 Pre-order)</span></p>
+        <button onclick="addToCart('Blender', 400)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Air+Fryer" alt="Air Fryer">
+        <h3>Air Fryer</h3>
+        <p>₵850 <span style="color:red;">(₵750 Pre-order)</span></p>
+        <button onclick="addToCart('Air Fryer', 750)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Microwave" alt="Microwave">
+        <h3>Microwave</h3>
+        <p>₵1200 <span style="color:red;">(₵1050 Pre-order)</span></p>
+        <button onclick="addToCart('Microwave', 1050)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Multi+Cooker" alt="Multi Cooker">
+        <h3>Multi-purpose Cooker</h3>
+        <p>₵950 <span style="color:red;">(₵850 Pre-order)</span></p>
+        <button onclick="addToCart('Multi-purpose Cooker', 850)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Hot+Plate" alt="Hot Plate">
+        <h3>Hot Plate</h3>
+        <p>₵400 <span style="color:red;">(₵350 Pre-order)</span></p>
+        <button onclick="addToCart('Hot Plate', 350)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=Iron+Kettle" alt="Iron Kettle">
+        <h3>Iron Kettle</h3>
+        <p>₵300 <span style="color:red;">(₵250 Pre-order)</span></p>
+        <button onclick="addToCart('Iron Kettle', 250)">Add to Cart</button>
+      </div>
+    </div>
+  </section>  <section class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: ₵<span id="cart-total">0</span></h3>
+  </section>  <section id="contact">
+    <h2 style="text-align:center;">Checkout / Contact Us</h2>
+    <form id="orderForm" action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="hidden" name="_subject" value="New Pre-Order from MamaLove Website">
+      <input type="hidden" id="orderSummary" name="Order Summary">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required><label for="phone">Phone Number</label>
+  <input type="text" name="phone" id="phone" required>
+
+
+  <label for="address">Delivery Address</label>
+  <textarea name="address" id="address" required></textarea>
+
+
+  <button type="submit">Submit Order</button>
+</form>
+
+
+<div class="thank-you" id="thankYou">🎉 Thank you for your order! We'll contact you soon. 🎉</div>
+
+
+  </section>  <footer>
+    <p>📞 0245261862 / 0533477231 | 🌐 mamalovekitchenwears.com</p>
+    <p>© 2025 MamaLove Kitchen Wears. All rights reserved.</p>
+  </footer>  <script>
+    let cart = [];
+
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      updateCart();
+    }
+
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let total = 0;
+
+
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.textContent = ${item.product} - ₵${item.price};
+        cartItems.appendChild(div);
+        total += item.price;
+      });
+
+
+      cartTotal.textContent = total;
+      document.getElementById('orderSummary').value = JSON.stringify(cart);
+    }
+
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+
+      const form = e.target;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('thankYou').style.display = 'block';
+          form.reset();
+          cart = [];
+          updateCart();
+        } else {
+          alert('There was a problem submitting your order. Please try again.');
+        }
+      });
+    });
+  </script></body>
+</html>
